@@ -1,0 +1,142 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 05 May 2013 08:51:15 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 997
+Connection: keep-alive
+Cache-Control: no-cache, no-store
+Access-Control-Max-Age: 300
+Access-Control-Allow-Credentials: true
+
+{
+  "id": "pi_1EXUHgBuLa9YAcAAbQv7ySNG",
+  "object": "payment_intent",
+  "amount": 5000,
+  "amount_capturable": 0,
+  "amount_received": 5000,
+  "application": null,
+  "application_fee_amount": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "automatic",
+  "charges": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ch_1EXoUgBuLa9YAcAAe1BGdq7p",
+        "object": "charge",
+        "amount": 5000,
+        "amount_refunded": 0,
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": "txn_1EXoUgBuLa9YAcAAOAaTe3hc",
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": null,
+            "line1": null,
+            "line2": null,
+            "postal_code": "42424",
+            "state": null
+          },
+          "email": null,
+          "name": null,
+          "phone": null
+        },
+        "captured": true,
+        "created": 1557317010,
+        "currency": "usd",
+        "customer": null,
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "invoice": null,
+        "livemode": false,
+        "metadata": {},
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 44,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_1EXUHgBuLa9YAcAAbQv7ySNG",
+        "payment_method": "pm_1EXoUeBuLa9YAcAA4Aw1b4it",
+        "payment_method_details": {
+          "card": {
+            "brand": "visa",
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": "pass",
+              "cvc_check": "pass"
+            },
+            "country": "US",
+            "description": "Visa Classic",
+            "exp_month": 4,
+            "exp_year": 2024,
+            "fingerprint": "UHtKlRLXnYTQgvqq",
+            "funding": "credit",
+            "last4": "4242",
+            "three_d_secure": null,
+            "wallet": null
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/acct_1D7h38BuLa9YAcAA/ch_1EXoUgBuLa9YAcAAe1BGdq7p/rcpt_F1sF7iJ5Zr8VA1hVxU9NwML0ny9Qzip",
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/ch_1EXoUgBuLa9YAcAAe1BGdq7p/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_1EXUHgBuLa9YAcAAbQv7ySNG"
+  },
+  "client_secret": "pi_1EXUHgBuLa9YAcAAbQv7ySNG_secret_7FSqvgWJuXnjbQCImYKjhF1Xp",
+  "confirmation_method": "manual",
+  "created": 1557317010,
+  "currency": "usd",
+  "customer": null,
+  "description": null,
+  "invoice": null,
+  "last_payment_error": null,
+  "livemode": false,
+  "metadata": {},
+  "next_action": null,
+  "on_behalf_of": null,
+  "payment_method": "pm_1EXoUeBuLa9YAcAA4Aw1b4it",
+  "payment_method_types": [
+    "card"
+  ],
+  "receipt_email": null,
+  "review": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "status": "succeeded",
+  "transfer_data": null,
+  "transfer_group": null
+}

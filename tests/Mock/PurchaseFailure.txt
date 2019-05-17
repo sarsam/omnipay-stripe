@@ -1,0 +1,48 @@
+HTTP/1.1 402 Request Failed
+Server: nginx
+Date: Fri, 15 Feb 2013 18:26:37 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 151
+Connection: keep-alive
+Cache-Control: no-cache, no-store
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 300
+
+{
+  "error": {
+    "charge": "ch_1EaN9KBuLa9YAcAAphUREF4t",
+    "code": "card_declined",
+    "decline_code": "generic_decline",
+    "doc_url": "https://stripe.com/docs/error-codes/card-declined",
+    "message": "Your card was declined.",
+    "payment_intent": {
+      "id": "pi_1EaN9JBuLa9YAcAAlYOVqo9K",
+      "object": "payment_intent",
+      "allowed_source_types": [
+        "card"
+      ],
+      "amount": 2000,
+      "amount_capturable": 0,
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "client_secret": "pi_1EaN9JBuLa9YAcAAlYOVqo9K_secret_9sQBiN6ZWd9e10HtlmlshXr6N",
+      "confirmation_method": "manual",
+      "created": 1557926881,
+      "currency": "usd",
+      "customer": "cus_F4SpNGZGRF4Jpq",
+      "description": "website",
+      "invoice": null,
+      "created": 1557926881,
+      "customer": null,
+      "livemode": false,
+      "metadata": {
+      },
+      "type": "card"
+    },
+    "type": "card_error"
+  }
+}

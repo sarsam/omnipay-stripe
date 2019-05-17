@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+
+{
+  "id": "re_1Ea0geBuLa9YAcAAupnCSN5M",
+  "object": "refund",
+  "amount": 2000,
+  "balance_transaction": null,
+  "charge": "ch_1EXTLmBuLa9YAcAA4NSYRcwz",
+  "created": 1557840536,
+  "currency": "usd",
+  "metadata": {},
+  "reason": null,
+  "receipt_number": null,
+  "source_transfer_reversal": null,
+  "status": "succeeded",
+  "transfer_reversal": null
+}

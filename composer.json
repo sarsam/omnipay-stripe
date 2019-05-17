@@ -1,0 +1,37 @@
+{
+    "name": "sarsam/omnipay-stripe",
+    "type": "library",
+    "description": "stripe gateway for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "paymentIntent",
+        "stripe",
+        "purchase"
+    ],
+    "homepage": "https://github.com/sarsam/omnipay-stripe.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samvel Sargsyan",
+            "email": "sarsamve1993@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Stripe\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3"
+    },
+
+    "require-dev": {
+        "omnipay/tests": "^3",
+        "squizlabs/php_codesniffer": "^3",
+        "phpro/grumphp": "^0.14"
+    }
+}

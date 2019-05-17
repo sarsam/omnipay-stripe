@@ -1,0 +1,73 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 15 Feb 2013 18:25:28 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 3999
+Connection: keep-alive
+Cache-Control: no-cache, no-store
+Request-Id: req_8PDHeZazN2LwML
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 300
+
+{
+  "id": "pi_1EXUHgBuLa9YAcAAbQv7ySNG",
+  "object": "payment_intent",
+  "allowed_source_types": [
+    "card"
+  ],
+  "amount": 2000,
+  "amount_capturable": 0,
+  "amount_received": 0,
+  "application": null,
+  "application_fee_amount": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "automatic",
+  "charges": {
+    "object": "list",
+    "data": [
+    ],
+    "has_more": false,
+    "total_count": 0,
+    "url": "/v1/charges?payment_intent=pi_1EaNCuBuLa9YAcAAvr1EgysD"
+  },
+  "client_secret": "pi_1EaNCuBuLa9YAcAAvr1EgysD_secret_I4UdNnHXRjRj8OSqMEGX3BGDj",
+  "confirmation_method": "manual",
+  "created": 1557927104,
+  "currency": "usd",
+  "customer": "cus_F4WF5Yv8GW7V3x",
+  "description": "website",
+  "invoice": null,
+  "last_payment_error": null,
+  "livemode": false,
+  "metadata": {
+    "order_id": "511"
+  },
+  "next_action": {
+    "type": "use_stripe_sdk",
+    "use_stripe_sdk": {
+      "type": "three_d_secure_redirect",
+      "stripe_js": "https://hooks.stripe.com/3d_secure_2_eap/begin_test/src_1EaNCuBuLa9YAcAAxsUZoTWq/src_client_secret_F4WFXff9m459EWIxrPqNY1dT"
+    }
+  },
+  "next_source_action": {
+    "type": "use_stripe_sdk",
+    "use_stripe_sdk": {
+      "type": "three_d_secure_redirect",
+      "stripe_js": "https://hooks.stripe.com/3d_secure_2_eap/begin_test/src_1EaNCuBuLa9YAcAAxsUZoTWq/src_client_secret_F4WFXff9m459EWIxrPqNY1dT"
+    }
+  },
+  "on_behalf_of": null,
+  "payment_method": "pm_1EaNCqBuLa9YAcAA3EZFxx1e",
+  "payment_method_types": [
+    "card"
+  ],
+  "receipt_email": null,
+  "review": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "status": "requires_source_action",
+  "transfer_data": null,
+  "transfer_group": null
+}
