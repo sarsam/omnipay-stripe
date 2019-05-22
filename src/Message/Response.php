@@ -51,7 +51,7 @@ class Response extends AbstractResponse
      */
     public function is3DSecure()
     {
-        return !isset($this->data['error']) && $this->data['status'] == 'requires_source_action' &&
+        return !isset($this->data['error']) && $this->data['status'] == 'requires_action' &&
             $this->data['next_action']['type'] == 'use_stripe_sdk';
     }
 
