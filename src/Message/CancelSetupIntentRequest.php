@@ -5,7 +5,7 @@ namespace Omnipay\Stripe\Message;
 /**
  * Stripe Cancel Setup Intent Request.
  * @see  \Omnipay\Stripe\Gateway
- * @link https://stripe.com/docs/api/setup_intents/confirm
+ * @link https://stripe.com/docs/api/setup_intents/cancel
  */
 class CancelSetupIntentRequest extends AbstractRequest
 {
