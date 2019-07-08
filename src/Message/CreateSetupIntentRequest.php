@@ -4,7 +4,6 @@ namespace Omnipay\Stripe\Message;
 
 /**
  * Stripe Create Setup Intent Request.
- *
  * @see  \Omnipay\Stripe\Gateway
  * @link https://stripe.com/docs/api/setup_intents/create
  */
@@ -22,6 +21,7 @@ class CreateSetupIntentRequest extends AbstractRequest
      * Set confirm << true or false >>.
      *
      * @param  $value
+     *
      * @return $this
      */
     public function setConfirm($value)
@@ -31,7 +31,6 @@ class CreateSetupIntentRequest extends AbstractRequest
 
     /**
      * Connect only
-     *
      * @return mixed
      */
     public function getOnBehalfOf()
@@ -41,6 +40,7 @@ class CreateSetupIntentRequest extends AbstractRequest
 
     /**
      * @param  string $value
+     *
      * @return $this
      */
     public function setOnBehalfOf($value)
@@ -61,6 +61,7 @@ class CreateSetupIntentRequest extends AbstractRequest
      * Valid payment method types include: card and card_present.
      *
      * @param  array $value
+     *
      * @return $this
      */
     public function setPaymentMethodTypes(array $value)
@@ -81,6 +82,7 @@ class CreateSetupIntentRequest extends AbstractRequest
      * Default value is off_session
      *
      * @param  $value
+     *
      * @return $this
      */
     public function setUsage($value)
@@ -90,10 +92,11 @@ class CreateSetupIntentRequest extends AbstractRequest
 
     public function getData()
     {
-
         $data = [];
 
-        $data['confirm'] = $this->getConfirm() ? $this->getConfirm() : 'true';
+        if ($this->getConfirm()) {
+            $data['confirm'] = $this->getConfirm();
+        }
 
         if ($this->getCustomerReference()) {
             $data['customer'] = $this->getCustomerReference();
@@ -130,6 +133,6 @@ class CreateSetupIntentRequest extends AbstractRequest
 
     public function getEndpoint()
     {
-        return $this->endpoint . '/setup_intents';
+        return $this->endpoint.'/setup_intents';
     }
 }

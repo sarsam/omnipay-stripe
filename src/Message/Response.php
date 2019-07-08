@@ -97,6 +97,10 @@ class Response extends AbstractResponse
             return $this->data['id'];
         }
 
+        if (isset($this->data['object']) && 'setup_intent' === $this->data['object']) {
+            return $this->data['payment_method'];
+        }
+
         return null;
     }
 
@@ -134,6 +138,23 @@ class Response extends AbstractResponse
         return null;
     }
 
+    /**
+     * Get the client secret reference.
+     *
+     * @return string|null
+     */
+    public function getClientSecret()
+    {
+        if (isset($this->data['object']) && 'payment_intent' === $this->data['object']) {
+            return $this->data['client_secret'];
+        }
+
+        if (isset($this->data['object']) && 'setup_intent' === $this->data['object']) {
+            return $this->data['client_secret'];
+        }
+
+        return null;
+    }
 
     /**
      * Get the card data from the response.
