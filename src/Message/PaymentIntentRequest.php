@@ -203,6 +203,24 @@ class PaymentIntentRequest extends AbstractRequest
     /**
      * @return mixed
      */
+    public function getSetupFutureUsage()
+    {
+        return $this->getParameter('setupFutureUsage');
+    }
+
+    /**
+     * Set the SetupIntent’s future usage.
+     *
+     * @param  $value
+     * @return $this
+     */
+    public function setSetupFutureUsage($value)
+    {
+        return $this->setParameter('setupFutureUsage', $value);
+    }
+    /**
+     * @return mixed
+     */
     public function getStatementDescriptor()
     {
         return $this->getParameter('statementDescriptor');
@@ -316,6 +334,10 @@ class PaymentIntentRequest extends AbstractRequest
 
         if ($this->getSavePaymentMethod()) {
             $data['save_payment_method'] = $this->getSavePaymentMethod();
+        }
+
+        if ($this->getSetupFutureUsage()) {
+            $data['setup_future_usage'] = $this->getSetupFutureUsage();
         }
 
         if ($this->getShipping()) {
