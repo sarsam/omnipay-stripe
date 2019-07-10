@@ -40,7 +40,10 @@ class CreatePaymentIntentRequest extends PaymentIntentRequest
         $data['confirm'] = $this->getConfirm() ? $this->getConfirm() : 'true';
         $data['confirmation_method'] = $this->getConfirmationMethod() ? $this->getConfirmationMethod() : 'manual';
         $data['payment_method_types'] = $this->getPaymentMethodTypes() ? $this->getPaymentMethodTypes() : ["card"];
-        $data['off_session'] = $this->getOffSession() ? $this->getOffSession() : 'true';
+
+        if ($this->getOffSession()) {
+            $data['off_session'] = $this->getOffSession();
+        }
 
         if ($this->getDestination()) {
             $data['transfer_data'] = [
