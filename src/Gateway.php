@@ -161,6 +161,18 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * List PaymentIntents Request.
+     *
+     * @param  array $parameters
+     *
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function listPaymentIntents(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Stripe\Message\ListPaymentIntentsRequest', $parameters);
+    }
+
+    /**
      * Create SetupIntent Request.
      *
      * @param array $parameters
@@ -218,18 +230,6 @@ class Gateway extends AbstractGateway
     public function cancelSetupIntent(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Stripe\Message\CancelSetupIntentRequest', $parameters);
-    }
-
-    /**
-     * List PaymentIntents Request.
-     *
-     * @param  array $parameters
-     *
-     * @return \Omnipay\Common\Message\AbstractRequest
-     */
-    public function listPaymentIntents(array $parameters = array())
-    {
-        return $this->createRequest('\Omnipay\Stripe\Message\ListPaymentIntentsRequest', $parameters);
     }
 
     /**

@@ -24,20 +24,10 @@ repository.
 
 ## Information
 
-In this package now  implemented only PaymentIntents, PaymentMethods, Customers and Refunds. 
+In this package now  implemented only SetupIntents, PaymentIntents, PaymentMethods, Customers and Refunds. 
 
 [Stripe API Documetnation](https://stripe.com/docs/api).
 Other requests  is in the process...
-
-
-## Test Mode
-
-Stripe accounts have test-mode API keys as well as live-mode API keys. These keys can be active
-at the same time. Data created with test-mode credentials will never hit the credit card networks
-and will never cost anyone money.
-
-Unlike some gateways, there is no test mode endpoint separate to the live mode endpoint, the
-Stripe API endpoint is the same for test and for live.
 
 ## Support
 

@@ -10,6 +10,25 @@ namespace Omnipay\Stripe\Message;
  */
 class CreatePaymentIntentRequest extends PaymentIntentRequest
 {
+    /**
+     * @return mixed
+     */
+    public function getOffSession()
+    {
+        return $this->getParameter('offSession');
+    }
+
+    /**
+     * Set the off_session.
+     *
+     * @param  $value
+     *
+     * @return $this
+     */
+    public function setOffSession($value)
+    {
+        return $this->setParameter('offSession', $value);
+    }
 
     public function getData()
     {
@@ -21,6 +40,7 @@ class CreatePaymentIntentRequest extends PaymentIntentRequest
         $data['confirm'] = $this->getConfirm() ? $this->getConfirm() : 'true';
         $data['confirmation_method'] = $this->getConfirmationMethod() ? $this->getConfirmationMethod() : 'manual';
         $data['payment_method_types'] = $this->getPaymentMethodTypes() ? $this->getPaymentMethodTypes() : ["card"];
+        $data['off_session'] = $this->getOffSession() ? $this->getOffSession() : 'true';
 
         if ($this->getDestination()) {
             $data['transfer_data'] = [

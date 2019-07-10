@@ -9,6 +9,7 @@
         "pay",
         "payment",
         "paymentIntent",
+        "setupIntent",
         "stripe",
         "purchase"
     ],
