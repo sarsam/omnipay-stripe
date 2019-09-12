@@ -39,7 +39,7 @@ class CreateCustomerRequest extends CustomerRequest
         }
 
         if ($this->getTaxIdData()) {
-            $data['payment_method'] = $this->getTaxIdData();
+            $data['tax_id_data'] = $this->getTaxIdData();
         }
 
         return $data;
